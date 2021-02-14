@@ -1,1 +1,1 @@
-print("This project will be awesome")
+print("This project will be awesome!")
