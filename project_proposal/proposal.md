@@ -50,7 +50,7 @@ Through this project, our group would like to learn how to:
 | 04/14 | Final testing and editing - code should be complete by this point |
 
 
-**5\. Collaboration plan: **
+**5\. Collaboration plan:**
 
 Since we have a broad variety of skill sets, we will mostly aim to divvy up the workload and hold frequent check-ins to share our progress, do code reviews, work out blockers, and brainstorm the direction of our project. We can aim to check-in on Mondays and Thursdays, concurrently giving each team member the opportunity to self-manage tasks. 
 
