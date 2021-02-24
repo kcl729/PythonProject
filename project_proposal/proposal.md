@@ -1,3 +1,6 @@
+**Team Members:**
+Amber Sillis, Moise Harari, Kiernan Leahy
+
 **1\. The Big Idea**
 
 A large portion of Americans have challenges tracking and paying their expenses. According to a 2018 survey of 1,500 people, "65 percent of Americans said they don't know how much they spent last month" (Intuit Mint Life). The same survey also showed that "nearly a third of Americans wish they'd spent less in the last month". These financial challenges are caused by several factors. One of these factors seems to be a lack of habits in expense tracking, as shown by a study from the National Foundation for Credit Counseling, which found that "61% of US adults don't keep track of their money".
