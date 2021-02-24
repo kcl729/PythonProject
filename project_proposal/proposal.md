@@ -1,5 +1,4 @@
 **Team Members:**
-
 Amber Sillis, Moise Harari, Kiernan Leahy
 
 **1\. The Big Idea**
