@@ -70,8 +70,9 @@ We have an agile based project timeline setup. The check ins will be bi-weekly a
 
 A class where we work on integrating python with Excel/SQL through the use of APIs would be useful for helping us complete the expense tracker. Additionally, a 10-20 minute segment on best practices for information storage and analysis (to minimize data used) would be helpful for both this project and future career prospects.
 
-Works Cited:
+**Works Cited:**
+Kane, Libby. “61% Of US Adults Don’t Keep Track Of Their Money.” Business Insider, https://www.businessinsider.com/61-of-us-adults-dont-keep-track-of-their-money-2014-4. Accessed 24 Feb. 2021.
 
-<https://mint.intuit.com/blog/budgeting/spending-knowledge-survey/>
+Mint. “Survey: 65% of Americans Have No Idea How Much They Spent Last Month.” MintLife Blog, 29 May 2020, https://mint.intuit.com/blog/budgeting/spending-knowledge-survey/.
 
-https://www.businessinsider.com/personal-finance/61-of-us-adults-dont-keep-track-of-their-money-2014-4
+
