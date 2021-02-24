@@ -1,4 +1,4 @@
-**1\. The Big Idea:**
+**1\. The Big Idea**
 
 A large portion of Americans have challenges tracking and paying their expenses. According to a 2018 survey of 1,500 people, "65 percent of Americans said they don't know how much they spent last month" (Intuit Mint Life). The same survey also showed that "nearly a third of Americans wish they'd spent less in the last month". These financial challenges are caused by several factors. One of these factors seems to be a lack of habits in expense tracking, as shown by a study from the National Foundation for Credit Counseling, which found that "61% of US adults don't keep track of their money".
 
@@ -10,7 +10,7 @@ The minimum viable product for this project is best described as a combination o
 
 If our solution exceeds our expectations, a stretch goal could be to find a way to integrate the expense tracker with users' bank accounts so that the expenses are automatically inputted into the platform rather than having the user input them themselves, by using the Plaid API to pull information directly from people's bank accounts. Plaid offers a seamless user experience for logging into a variety of major banks' applications and accessing personal expenses. Since our goal is to empower anyone who is looking to improve their financial health, we will consider building both versions so that we can reach a wider audience. 
 
-**2\. Learning Goals:**
+**2\. Learning Goals**
 
 Through this project, our group would like to learn how to:
 
@@ -28,7 +28,7 @@ Through this project, our group would like to learn how to:
 
 -   We intend to create a finalized product that shows our mastery of python, so that we can put it in our personal portfolios.
 
-**3\. Implementation Plan:** this will probably be pretty vague initially. Perhaps at this early juncture you will have identified a library or a framework that you think will be useful for your project. If you don't have any idea how you will implement your project, provide a rough plan for how you will determine this information.
+**3\. Implementation Plan:** 
 
 -   Explore Plaid integration and possible applications for the API
 
