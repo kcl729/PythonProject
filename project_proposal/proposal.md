@@ -28,7 +28,7 @@ Through this project, our group would like to learn how to:
 
 -   We intend to create a finalized product that shows our mastery of python, so that we can put it in our personal portfolios.
 
-3\. Implementation Plan: this will probably be pretty vague initially. Perhaps at this early juncture you will have identified a library or a framework that you think will be useful for your project. If you don't have any idea how you will implement your project, provide a rough plan for how you will determine this information.
+**3\. Implementation Plan:** this will probably be pretty vague initially. Perhaps at this early juncture you will have identified a library or a framework that you think will be useful for your project. If you don't have any idea how you will implement your project, provide a rough plan for how you will determine this information.
 
 -   Explore Plaid integration and possible applications for the API
 
