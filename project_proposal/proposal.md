@@ -43,63 +43,12 @@ Through this project, our group would like to learn how to:
 **4\. Project schedule**
 | Date   |      Goal to Complete      |  
 |----------|:-------------:|
-| col 1 is |  left-aligned | 
-| col 2 is |    centered   |  
-| col 3 is | right-aligned | 
-|
+| 03/05 |  Each group member should have looked through and tested the  Plaid API. | 
+| 03/19 |    All pseudocode should be completed   |  
+| 04/02 | The basic user interface, user inputs, and expense tracking functionality should be complete | 
+| 04/09 | User interface remastered/finalized, any expense predicting/recommending completed, test run with group of friends should be started. |
+| 04/14 | Final testing and editing - code should be complete by this point |
 
-Date
-
- |
-
-Goal to Complete
-
- |
-|
-
-3/05
-
- |
-
-Each group member should have looked through and tested the  Plaid API.
-
- |
-|
-
-3/19
-
- |
-
-All pseudocode should be completed
-
- |
-|
-
-4/02
-
- |
-
-The basic user interface, user inputs, and expense tracking functionality should be complete
-
- |
-|
-
-4/09
-
- |
-
-User interface remastered/finalized, any expense predicting/recommending completed, test run with group of friends should be started.
-
- |
-|
-
-4/14
-
- |
-
-Final testing and editing - code should be complete by this point
-
- |
 
 **5\. Collaboration plan: **
 
