@@ -1,4 +1,4 @@
-1\. The Big Idea
+**1\. The Big Idea**
 
 A large portion of Americans have challenges tracking and paying their expenses. According to a 2018 survey of 1,500 people, "65 percent of Americans said they don't know how much they spent last month" (Intuit Mint Life). The same survey also showed that "nearly a third of Americans wish they'd spent less in the last month". These financial challenges are caused by several factors. One of these factors seems to be a lack of habits in expense tracking, as shown by a study from the National Foundation for Credit Counseling, which found that "61% of US adults don't keep track of their money".
 
@@ -10,7 +10,7 @@ The minimum viable product for this project is best described as a combination o
 
 If our solution exceeds our expectations, a stretch goal could be to find a way to integrate the expense tracker with users' bank accounts so that the expenses are automatically inputted into the platform rather than having the user input them themselves, by using the Plaid API to pull information directly from people's bank accounts. Plaid offers a seamless user experience for logging into a variety of major banks' applications and accessing personal expenses. Since our goal is to empower anyone who is looking to improve their financial health, we will consider building both versions so that we can reach a wider audience. 
 
-2\. Learning Goals
+**2\. Learning Goals**
 
 Through this project, our group would like to learn how to:
 
@@ -40,8 +40,7 @@ Through this project, our group would like to learn how to:
 
 -   Interview potential users about what functionality they want in the expense tracker
 
-4\. Project schedule: You have 8 weeks (roughly) to finish the project. Sketch out a rough schedule for completing the project. Depending on your project, you may be able to do this in great specificity or you may only be able to give a broad outline. Additionally, longer projects come with increased uncertainty, and this schedule will likely need to be refined along the way.
-
+**4\. Project schedule**
 |
 
 Date
@@ -97,7 +96,7 @@ Final testing and editing - code should be complete by this point
 
  |
 
-5\. Collaboration plan: How do you plan to collaborate with your teammates on this project? Will you split tasks up, complete them independently, and then integrate? Will you pair program the entire thing? Make sure to articulate your plan for successfully working together as a team. This might also include information about any software development methodologies you plan to use (e.g. agile development). Make sure to make clear why you are choosing this particular organizational structure.
+**5\. Collaboration plan: **
 
 Since we have a broad variety of skill sets, we will mostly aim to divvy up the workload and hold frequent check-ins to share our progress, do code reviews, work out blockers, and brainstorm the direction of our project. We can aim to check-in on Mondays and Thursdays, concurrently giving each team member the opportunity to self-manage tasks. 
 
@@ -105,7 +104,7 @@ One of our focuses will be on communicating, over slack, what we are working on 
 
 We have an agile based project timeline setup. The check ins will be bi-weekly at the beginning of the semester, with more check-ins happening near the due date because we will have better knowledge of Python then (and should be able to code faster/better) and it will be more important to touch base and ensure the interconnectivity of all parts of the application. For this reason, the goals are relatively broad, especially near the end of the semester since we don't have perfect knowledge of what the application will look like by that point in development. We felt that this was the best method of planning work since we are still learning Python, and what we learn during the semester may dramatically change the scope of the project.
 
-6\. Risks: What do you view as the biggest risks to the success of this project?
+**6\. Risks:** 
 
 1.  (Lack of) focus: The project entails more than writing a Python script and developing an application. It has elements of front-end development and product management, so we want to make sure the bulk of our work contributes to our skill building of Python and the project expectations. In order to mitigate this, we should design a very simple but nice-looking UI and take advantage of Plaid's uses. 
 
@@ -113,7 +112,7 @@ We have an agile based project timeline setup. The check ins will be bi-weekly a
 
 3.  Communication: When working with multiple people on a coding project it is easy to work on overlapping functions and processes without good communication, so by keeping each other updated on our work we can be more time efficient.
 
-7\. Additional Course Content: What are some topics that we might cover in class that you think would be especially helpful for your project? How to build a web app etc
+**7\. Additional Course Content:** 
 
 A class where we work on integrating python with Excel/SQL through the use of APIs would be useful for helping us complete the expense tracker. Additionally, a 10-20 minute segment on best practices for information storage and analysis (to minimize data used) would be helpful for both this project and future career prospects.
 
