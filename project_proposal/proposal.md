@@ -41,6 +41,11 @@ Through this project, our group would like to learn how to:
 -   Interview potential users about what functionality they want in the expense tracker
 
 **4\. Project schedule**
+| Date   |      Goal to Complete      |  
+|----------|:-------------:|
+| col 1 is |  left-aligned | 
+| col 2 is |    centered   |  
+| col 3 is | right-aligned | 
 |
 
 Date
