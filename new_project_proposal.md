@@ -38,16 +38,7 @@ We intend to create a finalized product that shows our mastery of python, so tha
 
 |
 
-Date
-
- |
-
-Goal to Complete
-
- |
-|
-
-04/9
+Date|Goal to Complete ||04/9
 
  |
 
