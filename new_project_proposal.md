@@ -35,8 +35,8 @@ We intend to create a finalized product that shows our mastery of python, so tha
 -   Pilot it with users to see what can be improved upon final submission
 
 4\. Project schedule
-
 | Date | Goal to Complete |
+|----------|:-------------:|
 | 04/9 | Build Flask app, create JSON file with mental math, test app, fix code where needed |
 | 04/11 | HTML & CSS: make the app look good for the user |
 | 04/13 | Time to work on stretch goal, build out case study component |
