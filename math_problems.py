@@ -1,5 +1,5 @@
 import random
-def math_game():
+def math_problem_practice():
     number_of_questions_so_far = 0
     number_correct_answers = 0                                                        
     while number_of_questions_so_far < 10:                                                 
@@ -31,4 +31,4 @@ def math_game():
         #we keep adding problems here...                                                                                                   
     print(f'Congratulations! You did a great job. You had {number_correct_answers}')      
 
-math_game()
+math_problem_practice()
