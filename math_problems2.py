@@ -55,4 +55,7 @@ def math_problem_practice():
         del problem_dictionary[random_problem]                                                                                                                                                                   
     print(f'Congratulations! You did a great job. You had {number_correct_answers}')      
 
+
+
+
 math_problem_practice()
