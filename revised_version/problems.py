@@ -40,4 +40,4 @@ problem_dictionary = {'P1':[f'Facebook had net income of ${p1_net_income_year1} 
 def generate_problem():
     # get a random key (P1, P2 etc) from the list
     random_problem = random.choice(list(problem_dictionary.keys()))
-    return random
+    return random_problem
