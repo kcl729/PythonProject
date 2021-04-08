@@ -1,4 +1,3 @@
-import mbta_helper 
 from flask import Flask
 from flask import request
 # from mbta_helper import find_stop_near
@@ -11,10 +10,10 @@ app = Flask(__name__)
 #     return render_template('index.html')
 
 @app.route('/', methods=["GET", "POST"])
-def get_nearest_stop():
+def math_problems():
     if request.method == "POST":
-        place_name = request.form['address']
-        result = mbta_helper.find_stop_near(place_name)
+        question = mathproblems3.random_problem()
+        math_problem = request.form['problem']
         if result != "Error":
             return render_template('station.html', result=result)
         else:
