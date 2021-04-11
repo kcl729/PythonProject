@@ -87,6 +87,23 @@ p17_costreductionperc = random.randrange(10,20,30)
 p17_costs = (100-p17_profitmargin)/100*p17_rev
 p17_solution = p17_costs * ((100-p17_costreductionperc)/100)
 
+#Problem 18
+p18_monday_visitors = random.randrange(100,1000,50)
+p18_answer = p18_monday_visitors*3**4
+
+#Problem 19
+p19_number_hours_worked_week1 = random.randrange(15,40,1)
+p19_money_made_week1 = random.randrange(110,150,1)
+p19_number_hours_worked_week2 = random.randrange(10,45,1)
+p19_answer = (p19_money_made_week1/p19_number_hours_worked_week1)*p19_number_hours_worked_week2
+
+#Problem 20
+p20_domain_name_cost = random.randrange(900,3000,50)
+p20_it_cost = random.randrange(12000,30000,100)
+p20_marketing_cost = random.randrange(7000,20000,100)
+p20_price = random.randrange(50,150,5)
+p20_answer = (p20_domain_name_cost+p20_it_cost+p20_marketing_cost)/p20_price
+
 #problem dictionary
 problem_dictionary = {
 'P1':[f'Facebook had net income of ${p1_net_income_year1} million in 2009 on revenue of ${p1_revenue_year1} million. Figures for 2010 weren\'t disclosed yet, but analysts have said the company\'s revenue in 2010 could be as much as ${p1_revenue_year2} billion, fueled by advertising growth. If Facebook maintained the same profit margin as in 2009, what would be their net income in 2010? (round to one decimal)',round(((p1_net_income_year1/p1_revenue_year1)*p1_revenue_year2*1000000000),1)],
@@ -105,8 +122,11 @@ problem_dictionary = {
 'P14':[f'If the COGS is {p14_perc} of a companys revenue, and they made {p14_sales} in sales this year, what is their COGS in dollar amount?' ,  round((p14_perc/100)*p14_sales)], 
 'P15':[f'For our new product, we are expecting to spend {p15_invest} in development, and each unit will cost {p15_cost} to produce, while it will be sold for {p15_price}. How many units do we need to sell to breakeven?', round(p15_invest/(p15_price-p15_cost))], 
 'P16':[f'Our client has a current revenue of {p16_currentrev} annually, and is expecting to see growth at {p16_y1growth}% in the next year, and a growth of {p16_y2growth} % and {p16_y3growth} % in the following years respectively. What is the expected revenue in year 3? Please round to the nearest integer', round(p16_solution)], 
-'P17':[f'Company A currently has a revenue of {p17_rev}, and a profit margin of {p17_profitmargin}. If their expenses are expected to go down by {p17_costreductionperc} % in the next year, what would be their actual costs in dollar amount in that year? Please round to the nearest integer.', round(p17_solution)]
-}
+'P17':[f'Company A currently has a revenue of {p17_rev}, and a profit margin of {p17_profitmargin}. If their expenses are expected to go down by {p17_costreductionperc} % in the next year, what would be their actual costs in dollar amount in that year? Please round to the nearest integer.', round(p17_solution)],
+'P18':[f'A technology startup launched a website on Monday. The number of visitors tripled every day until Friday. If the website had {p18_monday_visitors} visitors on Monday, how many visitors did it have on Friday? (Round to nearest Integer)', round(p18_answer)],
+'P19':[f'Due to the recent health crisis, George was laid off and was forced to take temporary jobs. He worked {p19_number_hours_worked_week1} hours this week as a cashier at a local supermarket and made ${p19_money_made_week1}. If he works {p19_number_hours_worked_week2} hours next week at the same pay rate, how much money will he make? (Round to nearest integer)', round(p19_answer)],
+'P20':[f'You have developed a fitness coaching website that helps people lose weight. It cost you ${p20_domain_name_cost} to buy the domain name from its previous owner, ${p20_it_cost} to hire IT people to develop the site, and then you spent ${p20_marketing_cost} to market the website to law school students. Customers pay ${p20_price} for a lifetime access to your site. How many individual customers do you need to breakeven? (Round to nearest integer)', round(p20_answer)],
+} 
 
 global correct_answers_count
 correct_answers_count = 0
