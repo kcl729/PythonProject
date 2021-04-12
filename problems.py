@@ -87,6 +87,71 @@ p17_costreductionperc = random.randrange(10,20,30)
 p17_costs = (100-p17_profitmargin)/100*p17_rev
 p17_solution = p17_costs * ((100-p17_costreductionperc)/100)
 
+#Problem 18
+p18_monday_visitors = random.randrange(100,1000,50)
+p18_answer = p18_monday_visitors*3**4
+
+#Problem 19
+p19_number_hours_worked_week1 = random.randrange(15,40,1)
+p19_money_made_week1 = random.randrange(110,150,1)
+p19_number_hours_worked_week2 = random.randrange(10,45,1)
+p19_answer = (p19_money_made_week1/p19_number_hours_worked_week1)*p19_number_hours_worked_week2
+
+#Problem 20
+p20_domain_name_cost = random.randrange(900,3000,50)
+p20_it_cost = random.randrange(12000,30000,100)
+p20_marketing_cost = random.randrange(7000,20000,100)
+p20_price = random.randrange(50,150,5)
+p20_answer = (p20_domain_name_cost+p20_it_cost+p20_marketing_cost)/p20_price
+
+# problem 21
+p21_big_num = random.randrange(200, 400, 20)
+p21_students = random.randrange(30, 70, 5)
+p21_alumni = random.randrange(20, 80, 5)
+
+# problem 22
+p22_big_price = random.randrange(20000000, 100000000, 10000000)
+p22_percent = random.randrange(10, 40, 5)
+
+# problem 23
+p23_crew_1 = random.randrange(30, 70, 10)
+p23_crew_2 = random.randrange(40, 80, 10)
+
+# problem 24
+p24_quiz_per = random.randrange(10, 25, 5)
+p24_par_per = random.randrange(20, 40, 5)
+p24_exam_per = 100-p24_quiz_per-p24_par_per
+p24_par_grade = random.randrange(80, 100, 2)
+p24_quiz_grade = random.randrange(70, 100, 5)
+p24_exam_grade = random.randrange(70, 100, 5)
+
+# problem 25
+p25_last_month = random.randrange(8, 10, 1)
+p25_this_month = random.randrange(12, 18, 2)
+
+# problem 26
+p26_ducky_buy = random.randrange(400, 800, 100)
+p26_ducky_sell = random.randrange(1, 4, 1)
+
+# problem 27
+p27_start_month = random.randrange(10000, 30000, 2000)
+p27_end_month = random.randrange(60000, 90000, 5000)
+
+# problem 28
+p28_cost_marketing = random.randrange(5000, 25000, 10000)
+p28_cost_app_dev = random.randrange(15000, 55000, 10000)
+p28_cost_class_dev = random.randrange(10000, 40000, 10000)
+p28_lifetime_membership = random.randrange(20, 100, 10)
+
+# problem 29
+p29_base_pay = random.randrange(10000000, 50000000, 5000000)
+p29_percent_earnings = random.randrange(4, 40, 4)
+
+# problem 30
+p30_gamestop_price = random.randrange(3, 10, 1)
+p30_gamestop_growth = random.randrange(600, 1400, 20)
+p30_outstanding_shares = random.randrange(60, 80, 2)
+
 #problem dictionary
 problem_dictionary = {
 'P1':[f'Facebook had net income of ${p1_net_income_year1} million in 2009 on revenue of ${p1_revenue_year1} million. Figures for 2010 weren\'t disclosed yet, but analysts have said the company\'s revenue in 2010 could be as much as ${p1_revenue_year2} billion, fueled by advertising growth. If Facebook maintained the same profit margin as in 2009, what would be their net income in 2010? (round to one decimal)',round(((p1_net_income_year1/p1_revenue_year1)*p1_revenue_year2*1000000000),1)],
@@ -105,7 +170,20 @@ problem_dictionary = {
 'P14':[f'If the COGS is {p14_perc} of a companys revenue, and they made {p14_sales} in sales this year, what is their COGS in dollar amount?' ,  round((p14_perc/100)*p14_sales)], 
 'P15':[f'For our new product, we are expecting to spend {p15_invest} in development, and each unit will cost {p15_cost} to produce, while it will be sold for {p15_price}. How many units do we need to sell to breakeven?', round(p15_invest/(p15_price-p15_cost))], 
 'P16':[f'Our client has a current revenue of {p16_currentrev} annually, and is expecting to see growth at {p16_y1growth}% in the next year, and a growth of {p16_y2growth} % and {p16_y3growth} % in the following years respectively. What is the expected revenue in year 3? Please round to the nearest integer', round(p16_solution)], 
-'P17':[f'Company A currently has a revenue of {p17_rev}, and a profit margin of {p17_profitmargin}. If their expenses are expected to go down by {p17_costreductionperc} % in the next year, what would be their actual costs in dollar amount in that year? Please round to the nearest integer.', round(p17_solution)]
+'P17':[f'Company A currently has a revenue of {p17_rev}, and a profit margin of {p17_profitmargin}. If their expenses are expected to go down by {p17_costreductionperc} % in the next year, what would be their actual costs in dollar amount in that year? Please round to the nearest integer.', round(p17_solution)],
+'P18':[f'A technology startup launched a website on Monday. The number of visitors tripled every day until Friday. If the website had {p18_monday_visitors} visitors on Monday, how many visitors did it have on Friday? (Round to nearest Integer)', round(p18_answer)],
+'P19':[f'Due to the recent health crisis, George was laid off and was forced to take temporary jobs. He worked {p19_number_hours_worked_week1} hours this week as a cashier at a local supermarket and made ${p19_money_made_week1}. If he works {p19_number_hours_worked_week2} hours next week at the same pay rate, how much money will he make? (Round to nearest integer)', round(p19_answer)],
+'P20':[f'You have developed a fitness coaching website that helps people lose weight. It cost you ${p20_domain_name_cost} to buy the domain name from its previous owner, ${p20_it_cost} to hire IT people to develop the site, and then you spent ${p20_marketing_cost} to market the website to law school students. Customers pay ${p20_price} for a lifetime access to your site. How many individual customers do you need to breakeven? (Round to nearest integer)', round(p20_answer)],
+'P21':[f'At a recent networking event held by Babson College with {p21_big_num} attendees {p21_students}% of the people present were at one point Babson students and {p21_alumni}% of these students are currently enrolled at Babson. What percent of people present were curent students?', round(p21_big_num*p21_students/100*p21_alumni/100)],
+'P22':[f'In 2019 Macys built a new headquarters in boston for {p22_big_price}, but after the outbreak of Coronavirus, they decided to sell the headquarters at a {p22_percent}% loss. How much did they sell the headquarters for?', round(p22_big_price*p22_percent/100)],
+'P23':[f'Seaside Construction has two project crews. Crew 1 can complete a house in {p23_crew_1} days on average, while it takes crew 2 {p23_crew_2} days. How long would it take them to finish an average house working together?', round(1/(1/p23_crew_1 + 1/p23_crew_2))],
+'P24':[f'In Babson\'s most popular class, Techonolgy and Operations Management, participation is worth {p24_par_per}% of the grade, quizzes are worth {p24_quiz_per}% of the grade, and exams make up the remaining percent. What final grade would someone with a {p24_par_grade} in participation, {p24_quiz_grade} in quizzes, and {p24_exam_grade} on exams have?', round(p24_exam_per/100*p24_exam_grade+p24_par_grade*p24_par_per/100+p24_quiz_per/100*p24_quiz_grade)],
+'P25':[f'Dunder Mifflin\'s paper sales staff acquired {p25_last_month} new clients last month. This month a sale was offered for new customers and they acquired {p25_this_month} new clients. What was their percent increase in sales?', round(p25_this_month/p25_last_month*100)],
+'P26':[f'Ducky Import/Export Company purchases rubber ducks from their supplier in China for ${p26_ducky_buy} per thousand. They then resell them in the United States for ${p26_ducky_sell} each. What is the percent markup on each rubber duck?', round(p26_ducky_sell*1000/p26_ducky_buy*100-1)],
+'P27':[f'Over the past month Bitcoin has climbed from a price of ${p27_start_month} at the start of the month to a high of ${p27_end_month} today. If you bought at the start of the month, what percent return would you have obtained?', round(p27_end_month/p27_start_month*100-100)],
+'P28':[f'You have decided to develop an app that teaches people how to code. The cost of hiring programmers to code the app is ${p28_cost_app_dev}, the cost of marketing is ${p28_cost_marketing}, and the cost of developing the classes is ${p28_cost_class_dev}. You sell a lifetime membership for ${p28_lifetime_membership}. How many memberships do you need to sell to breakeven?', round((p28_cost_app_dev+p28_cost_class_dev+p28_cost_marketing)/p28_lifetime_membership)],
+'P29':[f'Tim Cook, the CEO of Apple, brought home ${p29_base_pay} in base pay last year. Taking into account bonuses, stock options, and other benefits his base pay was {p29_percent_earnings}% of his total earnings. How much did Tim Cook earn last year?', round(100/p29_percent_earnings*p29_base_pay)],
+'P30':[f'This year the share price of Gamestop has risen by {p30_gamestop_growth}% from its start of year price of ${p30_gamestop_price} per share. Gamestop currently has {p30_outstanding_shares} outstanding shares. By what amount (in dollars) has its market capitalization grown in this period?', round((p30_gamestop_price*p30_gamestop_growth-p30_gamestop_price)*p30_outstanding_shares)],
 }
 
 global correct_answers_count
