@@ -186,6 +186,7 @@ problem_dictionary = {
 'P30':[f'This year the share price of Gamestop has risen by {p30_gamestop_growth}% from its start of year price of ${p30_gamestop_price} per share. Gamestop currently has {p30_outstanding_shares} outstanding shares. By what amount (in dollars) has its market capitalization grown in this period?', round((p30_gamestop_price*p30_gamestop_growth-p30_gamestop_price)*p30_outstanding_shares)],
 }
 
+
 global correct_answers_count
 correct_answers_count = 0
 global questions_count 
