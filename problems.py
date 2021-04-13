@@ -31,14 +31,14 @@ p7_percentage_increase = random.randrange(2,10,1)
 p7_discount = random.randrange(10,30,1)
 
 #Problem 8 Data
-p8_investment = random.randrange(100000,200000,300000)
-p8_rev = random.randrange(290, 340, 505)
-p8_cost = random.randrange(100,200,230)
+p8_investment = random.randrange(100000,300000,100000)
+p8_rev = random.randrange(290, 505, 30)
+p8_cost = random.randrange(100,200, 50)
 
 #Problem 9 Data
-p9_investment = random.randrange(500000,1000000,15000000)
-p9_growthrate = random.randrange(20,30,40)
-p9_periods = random.randrange(2,3,4)
+p9_investment = random.randrange(500000,15000000, 500000)
+p9_growthrate = random.randrange(20,40,10)
+p9_periods = random.randrange(2,4,1)
 p = 0 
 p9_endamount = p9_investment 
 while p < p9_periods:
@@ -46,44 +46,44 @@ while p < p9_periods:
     p += 1
 
 #problem 10 data
-p10_percentage = random.randrange(13,17,21)
-p10_quantity = random.randrange(790000, 815000, 950000)
+p10_percentage = random.randrange(13,21,3)
+p10_quantity = random.randrange(800000, 950000, 50000)
 
 # problem 11 data
-p11_fixedcost = random.randrange(3000000, 3200000, 3450000)
-p11_units = random.randrange(175000, 450000, 515000)
+p11_fixedcost = random.randrange(3000000, 4000000, 500000)
+p11_units = random.randrange(175000, 225000, 25000)
 
 # problem 12 data 
-p12_rev = random.randrange(250000, 300000, 350000)
-p12_percentageincr = random.randrange(23,28,32)
+p12_rev = random.randrange(250000, 350000, 50000)
+p12_percentageincr = random.randrange(22,32,5)
 p12_solution = p12_rev + (1+(p12_percentageincr/100))*p12_rev
 
 # problem 13 data
-p13_output = random.randrange(120000,145000,152000)
-p13_employees = random.randrange(55,65,75)
+p13_output = random.randrange(120000,170000,25000)
+p13_employees = random.randrange(55,75,10)
 
 # problem 14
-p14_perc = random.randrange(10,12,14)
-p14_sales = random.randrange(130000000,145000000,151000000)
+p14_perc = random.randrange(10,14,2)
+p14_sales = random.randrange(130000000,150000000,20000000)
 
 # problem 15
-p15_invest = random.randrange(850000,1050000,1100000)
-p15_cost = random.randrange(100,150,200)
-p15_price = random.randrange(250,300,350)
+p15_invest = random.randrange(850000,1050000,20000)
+p15_cost = random.randrange(100,200,50)
+p15_price = random.randrange(250,400,50)
 
 # problem 16
-p16_currentrev = random.randrange(1000000,1500000,2000000)
-p16_y1growth = random.randrange(3,4,5)
-p16_y2growth = random.randrange(5,6,7)
-p16_y3growth = random.randrange(2,5,6)
+p16_currentrev = random.randrange(1000000,2000000,500000)
+p16_y1growth = random.randrange(3,5,1)
+p16_y2growth = random.randrange(5,7,1)
+p16_y3growth = random.randrange(2,5,1)
 p16_y1rev = p16_currentrev * (1+p16_y1growth/100)
 p16_y2rev = p16_y1rev * (1+p16_y2growth/100)
 p16_solution = p16_y2rev * (1+p16_y3growth/100)
 
 # problem 17
-p17_rev = random.randrange(1000000,1500000,2000000)
-p17_profitmargin = random.randrange(9,11,13)
-p17_costreductionperc = random.randrange(10,20,30)
+p17_rev = random.randrange(1000000,2000000,500000)
+p17_profitmargin = random.randrange(9,13,2)
+p17_costreductionperc = random.randrange(10,30,10)
 p17_costs = (100-p17_profitmargin)/100*p17_rev
 p17_solution = p17_costs * ((100-p17_costreductionperc)/100)
 
