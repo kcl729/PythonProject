@@ -37,12 +37,16 @@ app = Flask(__name__)
 def get_started():
     return render_template('index.html')
 
-@app.route('/', methods=["GET", "POST"])
-def display_problem():
-    problem_statement = generate_problem() 
-    return render_template('questions.html', problem_statement=problem_statement)
+@app.route('/quest')
+def count():
+    while questions_count < 10:
+        problem_statement = generate_problem() 
+        return render_template('questions.html', problem_statement=problem_statement)
+    return render_template('end.html')
 
-@app.route('/', methods=["GET", "POST"])
+# still need to add code to restrict to 10,20 or 30 questions
+
+@app.route('/quest', methods=["GET", "POST"])
 def reply():
     try:
         if request.method == "POST":

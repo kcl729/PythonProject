@@ -12,6 +12,7 @@ def generate_problem():
     problem_statement =  problem_dictionary[random_problem_key][0]   
     return problem_statement 
 
+
 def check_answer(answer):
     solution = problem_dictionary[random_problem_key][1]
     global questions_count 
