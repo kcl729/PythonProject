@@ -7,46 +7,41 @@ from problems import check_answer, generate_problem
 # need help with importing dictionary and generate_problem function from problems.py
 from problems_and_answers import problem_dictionary
 
+app = Flask(__name__)
+
+global total_questions
 global correct_answers_count
 correct_answers_count = 0
 global questions_count 
 questions_count = 0
-
-def generate_problem():
-    global random_problem_key
-    random_problem_key = random.choice(list(problem_dictionary.keys()))
-    problem_statement =  problem_dictionary[random_problem_key][0]   
-    return problem_statement 
-
-def check_answer(answer):
-    solution = problem_dictionary[random_problem_key][1]
-    global questions_count 
-    questions_count += 1
-    if solution == answer:
-        global correct_answers_count
-        correct_answers_count += 1
-        reply = f'Correct! You have a total of {correct_answers_count} correct answers. You have worked on {questions_count} problems so far'
-    else: 
-        reply = f'Wrong. The correct answer is {problem_dictionary[random_problem_key][1]}. You have a total of {correct_answers_count} correct answers. You have worked on {questions_count} problems so far'
-    del problem_dictionary[random_problem_key]
-    return reply
-app = Flask(__name__)
 
 # startpage: 
 @app.route('/')
 def get_started():
     return render_template('index.html')
 
-@app.route('/quest')
-def count():
-    while questions_count < 10:
-        problem_statement = generate_problem() 
-        return render_template('questions.html', problem_statement=problem_statement)
-    return render_template('end.html')
+# startpage data processing
+@app.route('/', methods=["GET", "POST"])
+def questions_number():
+    if request.method == "POST":
+        count = request.form.get('count')
+        global total_questions
+        if count == "ten":
+            total_questions = 10
+        elif count == "twenty":
+            total_questions = 20
+        else:
+            total_questions = 30
+        return render_template('welcome.html', total_questions=total_questions)
 
-# still need to add code to restrict to 10,20 or 30 questions
+# actual app:
+@app.route('/questions')
+def show_problem():
+    problem_statement = generate_problem() 
+    return render_template('questions.html', problem_statement=problem_statement)
 
-@app.route('/quest', methods=["GET", "POST"])
+# check answers:
+@app.route('/questions', methods=["GET", "POST"])  
 def reply():
     try:
         if request.method == "POST":
@@ -55,6 +50,13 @@ def reply():
         return render_template('checkanswer.html', reply=reply)
     except ValueError:
         return render_template("error.html")
+
+@app.route('/answers', methods=["GET", "POST"])
+def next_problem():
+    if request.method == "POST":
+        while questions_count < total_questions:
+            show_problem()
+        return render_template('end.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
