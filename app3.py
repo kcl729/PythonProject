@@ -37,9 +37,11 @@ def questions_number():
 # actual app:
 @app.route('/questions')
 def show_problem():
-    problem_statement = generate_problem() 
-    return render_template('questions.html', problem_statement=problem_statement)
-
+    while questions_count < total_questions:
+        problem_statement = generate_problem() 
+        return render_template('questions.html', problem_statement=problem_statement)
+    return render_template('end.html')
+    
 # check answers:
 @app.route('/questions', methods=["GET", "POST"])  
 def reply():
@@ -50,13 +52,6 @@ def reply():
         return render_template('checkanswer.html', reply=reply)
     except ValueError:
         return render_template("error.html")
-
-@app.route('/answers', methods=["GET", "POST"])
-def next_problem():
-    if request.method == "POST":
-        while questions_count < total_questions:
-            show_problem()
-        return render_template('end.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
