@@ -3,7 +3,7 @@ from flask import request
 import random
 # from mbta_helper import find_stop_near
 from flask import render_template
-from problems import check_answer, generate_problem, q_req
+from problems import check_answer, generate_problem, q_req, show_results
 # need help with importing dictionary and generate_problem function from problems.py
 from problems_and_answers import problem_dictionary
 
@@ -33,12 +33,15 @@ def questions_requested():
 @app.route('/questions')
 def show_problem():
     global questions_count
+    global correct_answers_count
     if questions_count < total_questions:
         problem_statement = generate_problem() 
         questions_count += 1
         return render_template('questions.html', problem_statement=problem_statement)
     else: 
-        return render_template('end.html')
+        questions_count = 0
+        result = show_results()
+        return render_template('end.html', result=result)
 
 # check answers:
 @app.route('/questions', methods=["GET", "POST"])  
@@ -47,9 +50,9 @@ def reply():
         if request.method == "POST":
             answer = float(request.form['math_answer'])
             reply = check_answer(answer)     
-        return render_template('checkanswer.html', reply=reply)
+        return render_template('checkanswer.html', reply=reply, questions_count=questions_count, correct_answers_count=correct_answers_count)
     except ValueError:
-        return render_template("error.html")
-
+        return render_template("error.html")  
+        
 if __name__ == "__main__":
     app.run(debug=True)
