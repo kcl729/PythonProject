@@ -4,13 +4,22 @@
     <meta charset="UTF-8">
     <title>Consulting Math</title>
 </head>
+<style>
+body {background-color: rgb(203, 224, 231) }  
+h1 {color: navy; margin-left: 20px; }
+p {margin-left: 20px}
+</style>
 <body>
-    <h1>Problem statement:</h1>
-        <p>{{ problem_statement }} </p>
+    <h1>Welcome!</h1>
+    <p>Please grab a pen and some paper.</p>
     <form action="" method="POST">
-        <label for="fname">Your answer:</label>
-        <input type="number" id="math_answer" name="math_answer">
-        <button type="submit" value="Submit">Submit</button>
+    <select name="count" id="count">
+        <option value="ten" id="ten">10 Questions</option>
+        <option value="twenty" id="twenty">20 Questions</option>
+        <option value="thirty" id="thirty">30 Questions</option>
+    </select>
+    <button type="submit" value="Submit">Submit</button>
       </form>
+    </p>
 </body>
 </html>
