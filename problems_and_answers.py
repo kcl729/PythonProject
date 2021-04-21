@@ -3,7 +3,7 @@ import random
 #Problem 1 Data
 p1_net_income_year1 = random.randrange(100,500,50)                                      
 p1_revenue_year1 = random.randrange(500,1000,50)
-p1_revenue_year2 = random.randint(1,10)  
+p1_revenue_year2 = 10  
 p1_solution = round(((p1_net_income_year1/p1_revenue_year1)*p1_revenue_year2*1000000000),0)
 
 #Problem 2 Data
@@ -14,7 +14,7 @@ p2_solution = round((p2_number_of_partners/p2_number_of_employees)*100,0)
 #Problem 3 Data
 p3_percent_buyers = random.randrange(60,100,5)
 p3_percent_sneaker_buyers = random.randrange(10,50,5)
-p3_solution = round(p3_percent_buyers*(p3_percent_sneaker_buyers/100),0)
+p3_solution = round(100*(p3_percent_buyers/100)*(p3_percent_sneaker_buyers/100),0)
 
 #Problem 4 Data
 p4_single_bag_price = random.randrange(1,3,1)
@@ -52,12 +52,12 @@ p9_endamount = p9_investment
 while p < p9_periods:
     p9_endamount = p9_endamount * p9_growthrate
     p += 1
-#This problem is wrong
+#check with Amber
 
 #problem 10 data
 p10_percentage = random.randrange(13,21,3)
 p10_quantity = random.randrange(800000, 950000, 50000)
-p10_solution = round((p10_percentage/(100*p10_quantity)),0)
+p10_solution = round(((p10_percentage/100)*p10_quantity),0)
 
 # problem 11 data
 p11_fixedcost = random.randrange(3000000, 4000000, 500000)
@@ -146,12 +146,12 @@ p24_solution = round((p24_exam_per/100*p24_exam_grade+p24_par_grade*p24_par_per/
 # problem 25
 p25_last_month = random.randrange(8, 10, 1)
 p25_this_month = random.randrange(12, 18, 2)
-p25_solution = round((((p25_this_month-p25_last_month)/p25_last_month)*100),1)
+p25_solution = round((((p25_this_month-p25_last_month)/p25_last_month)*100),0)
 
 # problem 26
 p26_ducky_buy = random.randrange(400, 800, 100)
 p26_ducky_sell = random.randrange(1, 4, 1)
-p26_solution = round((p26_ducky_sell*1000/p26_ducky_buy*100-1),0)
+p26_solution = round(((p26_ducky_sell-(p26_ducky_buy/1000))/p26_ducky_buy),0)
 
 # problem 27
 p27_start_month = random.randrange(10000, 30000, 2000)
@@ -167,7 +167,7 @@ p28_solution = round(((p28_cost_app_dev+p28_cost_class_dev+p28_cost_marketing)/p
 
 # problem 29
 p29_base_pay = random.randrange(10000000, 50000000, 5000000)
-p29_percent_earnings = random.randrange(4, 40, 4)
+p29_percent_earnings = random.randrange(4, 40, 5)
 p29_solution = round((100/p29_percent_earnings*p29_base_pay),0)
 
 # problem 30
@@ -176,12 +176,10 @@ p30_gamestop_growth = random.randrange(600, 1400, 20)
 p30_outstanding_shares = random.randrange(60, 80, 2)
 p30_solution = round(((p30_gamestop_price*p30_gamestop_growth-p30_gamestop_price)*p30_outstanding_shares),0)
 
-#hello 
-
 #problem dictionary
 problem_dictionary = {
 'P1':[f'Facebook had net income of ${p1_net_income_year1:,} million in 2009 on revenue of ${p1_revenue_year1:,} million. Figures for 2010 weren\'t disclosed yet, but analysts have said the company\'s revenue in 2010 could be as much as ${p1_revenue_year2:,} billion, fueled by advertising growth. If Facebook maintained the same profit margin as in 2009, what would be their net income in 2010? Please round your answer to the nearest integer',p1_solution],
-'P2':[f'About {p2_number_of_partners:,} of Goldman Sachs (NYSE:GS)\'s roughly {p2_number_of_employees:,} employees have the title of partner, what\'s the percentage of partners among all Goldman Sachs employees? Please round your answer to 1 decimal place',p2_solution],
+'P2':[f'About {p2_number_of_partners:,} of Goldman Sachs (NYSE:GS)\'s roughly {p2_number_of_employees:,} employees have the title of partner, what\'s the percentage of partners among all Goldman Sachs employees? Please round your answer to the nearest integer',p2_solution],
 'P3':[f' The manager of an clothing store in Boston needed to calculate the percentage of customers who purchase sneakers. Upon completing her survey, she noticed that {p3_percent_buyers:,}% of the people that entered her store purchased an item. Of those customers, {p3_percent_sneaker_buyers:,}% percent purchased sneakers. What percent of the people that entered the clothing store purchased sneakers? Please round your answer to the nearest integer',p3_solution],
 'P4':[f'The price of a bag of chips is ${p4_single_bag_price:,}. The price of a ten pack of the same bag of chips is ${p4_tenpack_bag_price:,}. The ten pack of bag chips is what percentage cheaper than purchasing ten bag of chips individually? Please round your answer to the nearest integer',p4_solution],
 'P5':[f'An office manager purchased {p5_number_large_desks:,} large desks and {p5_number_small_desks:,} small desks. If the price of a large desk is three times the price of a small desk, what percent of the total cost was the cost of the small desks? Please round your answer to the nearest integer', p5_solution],
@@ -190,7 +188,7 @@ problem_dictionary = {
 'P8':[f'What is the breakeven quantity for a business that required an initial investment of ${p8_investment:,}, where each unit brings in ${p8_rev:,} of revenue but each unit costs ${p8_cost:,}?', p8_solution], 
 'P9':[f'What is the expected NPV for an investment of ${p9_investment:,}, where the annual growth rate is expected to be {p9_growthrate:,}% after {p9_periods:,} periods?', round(p9_endamount)], 
 'P10':[f'What is the addressable market size (in units) for company A if they want to reach {p10_percentage:,}% of a total of {p10_quantity:,} units? Please round your answer to the nearest integer', p10_solution], 
-'P11':[f'A make-up manufacturer has fixed costs of ${p11_fixedcost:,}, and sells {p11_units:,} units yearly. What is the fixed cost per unit? Please round to 1 decimal place', p11_solution], 
+'P11':[f'A make-up manufacturer has fixed costs of ${p11_fixedcost:,}, and sells {p11_units:,} units yearly. What is the fixed cost per unit? Please round to the nearest integer', p11_solution], 
 'P12':[f'A software company sells products in Spain, Italy, and the US. The Spanish market has revenues of ${p12_rev:,}, and Italy has {p12_percentageincr:,}% higher sales than Spain. What is the combined total of their Spain and Italy revenues? Please round your answer to the nearest integer' , p12_solution], 
 'P13':[f'What is the average productivity in a company with {p13_employees:,} employees and {p13_output:,} units of output in a given day? Please answer in units produced per employee rounded to the nearest integer', p13_solution], 
 'P14':[f'If COGS are {p14_perc:,}% of a company\'s revenue, and they made ${p14_sales:,} in sales this year, what is their COGS in dollar amount for this year? Please round your answer to the nearest integer' , p14_solution], 
@@ -204,7 +202,7 @@ problem_dictionary = {
 'P22':[f'In 2019 Macys built a new headquarters in boston for ${p22_big_price:,}, but after the outbreak of Coronavirus, they decided to sell the headquarters at a {p22_percent:,}% loss. How much did they sell the headquarters for? Please round your answer to the nearest integer', p22_solution],
 'P23':[f'Seaside Construction has two project crews. Crew 1 can complete a house in {p23_crew_1:,} days on average, while it takes crew 2 {p23_crew_2:,} days. How long would it take them to finish an average house working together? Please round your answer to the nearest integer', p23_solution],
 'P24':[f'In Babson\'s most popular class, Techonolgy and Operations Management, participation is worth {p24_par_per:,}% of the grade, quizzes are worth {p24_quiz_per:,}% of the grade, and exams make up the remaining percent. What final grade would someone with a {p24_par_grade:,} in participation, {p24_quiz_grade:,} in quizzes, and {p24_exam_grade:,} on exams have? Please round your answer to the nearest integer', p24_solution],
-'P25':[f'Dunder Mifflin\'s paper sales staff acquired {p25_last_month:,} new clients last month. This month a sale was offered for new customers and they acquired {p25_this_month:,} new clients. What was their percent increase in sales? Please round to 1 decimal place',p25_solution ],
+'P25':[f'Dunder Mifflin\'s paper sales staff acquired {p25_last_month:,} new clients last month. This month a sale was offered for new customers and they acquired {p25_this_month:,} new clients. What was their percent increase in sales? Please round to the nearest integer',p25_solution ],
 'P26':[f'Ducky Import/Export Company purchases rubber ducks from their supplier in China for ${p26_ducky_buy:,} per thousand. They then resell them in the United States for ${p26_ducky_sell:,} each. What is the percent markup on each rubber duck? Please round your answer to the nearest integer', p26_solution],
 'P27':[f'Over the past month Bitcoin has climbed from a price of ${p27_start_month:,} at the start of the month to a high of ${p27_end_month:,} today. If you bought at the start of the month, what percent return would you have obtained?', p27_solution],
 'P28':[f'You have decided to develop an app that teaches people how to code. The cost of hiring programmers to code the app is ${p28_cost_app_dev:,}, the cost of marketing is ${p28_cost_marketing:,}, and the cost of developing the classes is ${p28_cost_class_dev:,}. You sell a lifetime membership for ${p28_lifetime_membership:,}. How many memberships do you need to sell to breakeven? Please round your answer to the nearest integer', p28_solution],
