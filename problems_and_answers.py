@@ -52,7 +52,6 @@ p9_endamount = p9_investment
 while p < p9_periods:
     p9_endamount = p9_endamount * p9_growthrate
     p += 1
-#This problem is wrong
 
 #problem 10 data
 p10_percentage = random.randrange(13,21,3)
