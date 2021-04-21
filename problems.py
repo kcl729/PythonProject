@@ -23,7 +23,7 @@ def check_answer(answer):
         correct_answers_count += 1
         reply = f'Correct!'
     else: 
-        reply = f'Incorrect. The correct answer is {problem_dictionary[random_problem_key][1]}.'
+        reply = f'Incorrect. The correct answer is {problem_dictionary[random_problem_key][1]}'
     del problem_dictionary[random_problem_key]
     return reply
 
@@ -35,10 +35,10 @@ def show_results():
     return results 
 
 def q_req(count):
-    if count == "ten":
+    if count == "five":
+        total_questions = 5
+    elif count == "ten":
         total_questions = 10
-    elif count == "twenty":
-        total_questions = 20
     else:
-        total_questions = 30
+        total_questions = 15
     return total_questions
