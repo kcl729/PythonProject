@@ -47,12 +47,7 @@ p8_solution = round((p8_investment/(p8_rev-p8_cost)),0)
 p9_investment = random.randrange(500000,15000000, 500000)
 p9_growthrate = random.randrange(20,40,10)
 p9_periods = random.randrange(2,4,1)
-p = 0 
-p9_endamount = p9_investment 
-while p < p9_periods:
-    p9_endamount = p9_endamount * p9_growthrate
-    p += 1
-#check with Amber
+p9_solution = p9_investment*((1+(p9_growthrate/100))**p9_periods)
 
 #problem 10 data
 p10_percentage = random.randrange(13,21,3)
@@ -204,7 +199,7 @@ problem_dictionary = {
 'P24':[f'In Babson\'s most popular class, Techonolgy and Operations Management, participation is worth {p24_par_per:,}% of the grade, quizzes are worth {p24_quiz_per:,}% of the grade, and exams make up the remaining percent. What final grade would someone with a {p24_par_grade:,} in participation, {p24_quiz_grade:,} in quizzes, and {p24_exam_grade:,} on exams have? Please round your answer to the nearest integer', p24_solution],
 'P25':[f'Dunder Mifflin\'s paper sales staff acquired {p25_last_month:,} new clients last month. This month a sale was offered for new customers and they acquired {p25_this_month:,} new clients. What was their percent increase in sales? Please round to the nearest integer',p25_solution ],
 'P26':[f'Ducky Import/Export Company purchases rubber ducks from their supplier in China for ${p26_ducky_buy:,} per thousand. They then resell them in the United States for ${p26_ducky_sell:,} each. What is the percent markup on each rubber duck? Please round your answer to the nearest integer', p26_solution],
-'P27':[f'Over the past month Bitcoin has climbed from a price of ${p27_start_month:,} at the start of the month to a high of ${p27_end_month:,} today. If you bought at the start of the month, what percent return would you have obtained?', p27_solution],
+'P27':[f'Over the past month Bitcoin has climbed from a price of ${p27_start_month:,} at the start of the month to a high of ${p27_end_month:,} today. If you bought at the start of the month, what percent return would you have obtained? Please round to nearest integer', p27_solution],
 'P28':[f'You have decided to develop an app that teaches people how to code. The cost of hiring programmers to code the app is ${p28_cost_app_dev:,}, the cost of marketing is ${p28_cost_marketing:,}, and the cost of developing the classes is ${p28_cost_class_dev:,}. You sell a lifetime membership for ${p28_lifetime_membership:,}. How many memberships do you need to sell to breakeven? Please round your answer to the nearest integer', p28_solution],
 'P29':[f'Tim Cook, the CEO of Apple, brought home ${p29_base_pay:,} in base pay last year. Taking into account bonuses, stock options, and other benefits his base pay was {p29_percent_earnings:,}% of his total earnings. How much did Tim Cook earn last year?', p29_solution],
 'P30':[f'This year the share price of Gamestop has risen by {p30_gamestop_growth:,}% from its start of year price of ${p30_gamestop_price:,} per share. Gamestop currently has {p30_outstanding_shares:,} outstanding shares. By what amount (in dollars) has its market capitalization grown in this period? Please round your answer to the nearest integer', p30_solution]
