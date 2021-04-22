@@ -40,8 +40,7 @@ def show_results():
     """function that displays the user's results at the end of a practice session & resets it to 0 in case the user wants to start another session
     returns string with message to share user statistics"""
     global correct_answers_count
-    rightanswers = correct_answers_count
-    results = f'You got a total of {rightanswers} questions correct.'
+    results = f'You got a total of {correct_answers_count} questions correct.'
     correct_answers_count = 0
     return results 
 
