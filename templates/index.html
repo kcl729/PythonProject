@@ -13,13 +13,14 @@ p {margin-left: 40px; color: rgb(53, 53, 53); font-family: 'Segoe UI', Tahoma, G
     <img src="{{url_for('static', filename='banner.png')}}" style="width: 100%; position: absolute; top: -1px; left: -1px;">
     <br> <br> <br> <br> <br> <br> <br> <br> <br>  <br> <br>
     <h1>Welcome!</h1>
+    <p>In this website, you can practice math problems similar to the ones you will find in management consulting case interviews.</p>
     <p>Please grab a pen and some paper in case you need it for a calculation.</p>
     <p>How many questions would you like to do today? </p>
     <form action="" method="POST">
         <select name="count" id="count" style="margin-left: 40px;">
+        <option value="five" id="five">5 Questions</option>
         <option value="ten" id="ten">10 Questions</option>
-        <option value="twenty" id="twenty">20 Questions</option>
-        <option value="thirty" id="thirty">30 Questions</option>
+        <option value="fifteen" id="fifteen">15 Questions</option>
         </select>
     <button type="submit" value="Submit">Submit</button>
       </form>
