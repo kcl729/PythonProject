@@ -8,13 +8,13 @@ p1_solution = round(((p1_net_income_year1/p1_revenue_year1)*p1_revenue_year2*100
 
 #Problem 2 Data
 p2_number_of_employees = random.randrange(20000,60000,1000)                                      
-p2_number_of_partners = random.randrange(200,600,50) 
-p2_solution = round((p2_number_of_partners/p2_number_of_employees)*100,0)
+p2_number_of_partners = random.randrange(2000,6000,50) 
+p2_solution = round(((p2_number_of_partners/p2_number_of_employees)*100),0)
 
 #Problem 3 Data
 p3_percent_buyers = random.randrange(60,100,5)
 p3_percent_sneaker_buyers = random.randrange(10,50,5)
-p3_solution = round(100*(p3_percent_buyers/100)*(p3_percent_sneaker_buyers/100),0)
+p3_solution = round((100*(p3_percent_buyers/100)*(p3_percent_sneaker_buyers/100)),0)
 
 #Problem 4 Data
 p4_single_bag_price = random.randrange(1,3,1)
@@ -122,7 +122,7 @@ p21_solution = round((p21_big_num*p21_students/100*p21_alumni/100),0)
 # problem 22
 p22_big_price = random.randrange(20000000, 100000000, 10000000)
 p22_percent = random.randrange(10, 40, 5)
-p22_solution = round((p22_big_price*(1-p22_percent)),0)
+p22_solution = round((p22_big_price*(1-(p22_percent/100))),0)
 
 # problem 23
 p23_crew_1 = random.randrange(30, 70, 10)
@@ -144,9 +144,9 @@ p25_this_month = random.randrange(12, 18, 2)
 p25_solution = round((((p25_this_month-p25_last_month)/p25_last_month)*100),0)
 
 # problem 26
-p26_ducky_buy = random.randrange(400, 800, 100)
-p26_ducky_sell = random.randrange(1, 4, 1)
-p26_solution = round(((p26_ducky_sell-(p26_ducky_buy/1000))/p26_ducky_buy),0)
+p26_ducky_buy = random.randrange(4000, 8000, 100)
+p26_ducky_sell = random.randrange(10, 20, 1)
+p26_solution = round((((p26_ducky_sell-(p26_ducky_buy/1000))/(p26_ducky_buy/1000))*100),0)
 
 # problem 27
 p27_start_month = random.randrange(10000, 30000, 2000)
@@ -167,10 +167,11 @@ p29_solution = round((100/p29_percent_earnings*p29_base_pay),0)
 
 # problem 30
 p30_gamestop_price = random.randrange(3, 10, 1)
-p30_gamestop_growth = random.randrange(600, 1400, 20)
+p30_gamestop_growth = random.randrange(1000, 1400, 20)
 p30_outstanding_shares = random.randrange(60, 80, 2)
-p30_solution = round(((p30_gamestop_price*p30_gamestop_growth-p30_gamestop_price)*p30_outstanding_shares),0)
+p30_solution = round((((p30_gamestop_growth/100+1)*(p30_gamestop_price*p30_outstanding_shares))-(p30_gamestop_price*p30_outstanding_shares)),0)
 
+((p30_gamestop_price*p30_gamestop_growth-p30_gamestop_price)*p30_outstanding_shares)
 #problem dictionary
 problem_dictionary = {
 'P1':[f'Facebook had net income of ${p1_net_income_year1:,} million in 2009 on revenue of ${p1_revenue_year1:,} million. Figures for 2010 weren\'t disclosed yet, but analysts have said the company\'s revenue in 2010 could be as much as ${p1_revenue_year2:,} billion, fueled by advertising growth. If Facebook maintained the same profit margin as in 2009, what would be their net income in 2010? Please round your answer to the nearest integer',p1_solution],
@@ -181,7 +182,7 @@ problem_dictionary = {
 'P6':[f'The number of plant-based burguers sold in Boston during 2019 was {p6_number_burguers_sold_2019:,}; up {p6_percentage_increase:,}% from three years before. How many burguers were sold three years before 2019?',p6_solution], 
 'P7':[f'A chair in Wayfair\'s webiste was priced at ${p7_initial_price:,}. The marketing manager thought he could get more money for the chair, so he increased its price by {p7_percentage_increase:,}%. After a week, the chair had not been sold. The manager then discounted the new price by {p7_discount:,}%, and the chair was finally sold. For how much was the chair sold? Please round your answer to the nearest integer',p7_solution], 
 'P8':[f'What is the breakeven quantity for a business that required an initial investment of ${p8_investment:,}, where each unit brings in ${p8_rev:,} of revenue but each unit costs ${p8_cost:,}?', p8_solution], 
-'P9':[f'What is the expected NPV for an investment of ${p9_investment:,}, where the annual growth rate is expected to be {p9_growthrate:,}% after {p9_periods:,} periods?', p9_solution], 
+'P9':[f'What is the expected future value for an investment of ${p9_investment:,}, where the annual growth rate is expected to be {p9_growthrate:,}% after {p9_periods:,} periods?', p9_solution], 
 'P10':[f'What is the addressable market size (in units) for company A if they want to reach {p10_percentage:,}% of a total of {p10_quantity:,} units? Please round your answer to the nearest integer', p10_solution], 
 'P11':[f'A make-up manufacturer has fixed costs of ${p11_fixedcost:,}, and sells {p11_units:,} units yearly. What is the fixed cost per unit? Please round to the nearest integer', p11_solution], 
 'P12':[f'A software company sells products in Spain, Italy, and the US. The Spanish market has revenues of ${p12_rev:,}, and Italy has {p12_percentageincr:,}% higher sales than Spain. What is the combined total of their Spain and Italy revenues? Please round your answer to the nearest integer' , p12_solution], 
@@ -195,7 +196,7 @@ problem_dictionary = {
 'P20':[f'You have developed a fitness coaching website that helps people lose weight. It cost you ${p20_domain_name_cost:,} to buy the domain name from its previous owner, ${p20_it_cost:,} to hire IT people to develop the site, and then you spent ${p20_marketing_cost:,} to market the website to college students. Customers pay ${p20_price:,} for a lifetime access to your site. How many individual customers do you need to breakeven? Please round your answer to the nearest integer', p20_solution],
 'P21':[f'At a recent networking event held by Babson College with {p21_big_num:,} attendees, {p21_students:,}% of the people present were at one point Babson students, and {p21_alumni:,}% of these students are currently enrolled at Babson. What percent of people present were current students? Please round your answer to the nearest integer', p21_solution],
 'P22':[f'In 2019 Macys built a new headquarters in boston for ${p22_big_price:,}, but after the outbreak of Coronavirus, they decided to sell the headquarters at a {p22_percent:,}% loss. How much did they sell the headquarters for? Please round your answer to the nearest integer', p22_solution],
-'P23':[f'Seaside Construction has two project crews. Crew 1 can complete a house in {p23_crew_1:,} days on average, while it takes crew 2 {p23_crew_2:,} days. How long would it take them to finish an average house working together? Please round your answer to the nearest integer', p23_solution],
+'P23':[f'Seaside Construction has two project crews. Crew 1 can complete a house in {p23_crew_1:,} days on average, while crew 2 takes {p23_crew_2:,} days to complete a house. How long would it take them to finish an average house working together? Please round your answer to the nearest integer', p23_solution],
 'P24':[f'In Babson\'s most popular class, Techonolgy and Operations Management, participation is worth {p24_par_per:,}% of the grade, quizzes are worth {p24_quiz_per:,}% of the grade, and exams make up the remaining percent. What final grade would someone with a {p24_par_grade:,} in participation, {p24_quiz_grade:,} in quizzes, and {p24_exam_grade:,} on exams have? Please round your answer to the nearest integer', p24_solution],
 'P25':[f'Dunder Mifflin\'s paper sales staff acquired {p25_last_month:,} new clients last month. This month a sale was offered for new customers and they acquired {p25_this_month:,} new clients. What was their percent increase in sales? Please round to the nearest integer',p25_solution ],
 'P26':[f'Ducky Import/Export Company purchases rubber ducks from their supplier in China for ${p26_ducky_buy:,} per thousand. They then resell them in the United States for ${p26_ducky_sell:,} each. What is the percent markup on each rubber duck? Please round your answer to the nearest integer', p26_solution],
