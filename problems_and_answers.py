@@ -47,7 +47,7 @@ p8_solution = round((p8_investment/(p8_rev-p8_cost)),0)
 p9_investment = random.randrange(500000,15000000, 500000)
 p9_growthrate = random.randrange(20,40,10)
 p9_periods = random.randrange(2,4,1)
-p9_solution = p9_investment*((1+(p9_growthrate/100))**p9_periods)
+p9_solution = round((p9_investment*((1+(p9_growthrate/100))**p9_periods)),0)
 
 #problem 10 data
 p10_percentage = random.randrange(13,21,3)
@@ -181,7 +181,7 @@ problem_dictionary = {
 'P6':[f'The number of plant-based burguers sold in Boston during 2019 was {p6_number_burguers_sold_2019:,}; up {p6_percentage_increase:,}% from three years before. How many burguers were sold three years before 2019?',p6_solution], 
 'P7':[f'A chair in Wayfair\'s webiste was priced at ${p7_initial_price:,}. The marketing manager thought he could get more money for the chair, so he increased its price by {p7_percentage_increase:,}%. After a week, the chair had not been sold. The manager then discounted the new price by {p7_discount:,}%, and the chair was finally sold. For how much was the chair sold? Please round your answer to the nearest integer',p7_solution], 
 'P8':[f'What is the breakeven quantity for a business that required an initial investment of ${p8_investment:,}, where each unit brings in ${p8_rev:,} of revenue but each unit costs ${p8_cost:,}?', p8_solution], 
-'P9':[f'What is the expected NPV for an investment of ${p9_investment:,}, where the annual growth rate is expected to be {p9_growthrate:,}% after {p9_periods:,} periods?', round(p9_endamount)], 
+'P9':[f'What is the expected NPV for an investment of ${p9_investment:,}, where the annual growth rate is expected to be {p9_growthrate:,}% after {p9_periods:,} periods?', p9_solution], 
 'P10':[f'What is the addressable market size (in units) for company A if they want to reach {p10_percentage:,}% of a total of {p10_quantity:,} units? Please round your answer to the nearest integer', p10_solution], 
 'P11':[f'A make-up manufacturer has fixed costs of ${p11_fixedcost:,}, and sells {p11_units:,} units yearly. What is the fixed cost per unit? Please round to the nearest integer', p11_solution], 
 'P12':[f'A software company sells products in Spain, Italy, and the US. The Spanish market has revenues of ${p12_rev:,}, and Italy has {p12_percentageincr:,}% higher sales than Spain. What is the combined total of their Spain and Italy revenues? Please round your answer to the nearest integer' , p12_solution], 
