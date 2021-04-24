@@ -1,11 +1,9 @@
 from flask import Flask
 from flask import request
-import random
 # from mbta_helper import find_stop_near
 from flask import render_template
 from problems import check_answer, generate_problem, q_req, show_results
 # need help with importing dictionary and generate_problem function from problems.py
-from problems_and_answers import problem_dictionary
 
 app = Flask(__name__)
 
